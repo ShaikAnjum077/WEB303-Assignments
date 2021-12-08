@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+
+      body {
+        width: 100%;
+      }
+
+      form {
+        width: 100%;
+        padding: 2rem;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      form > div {
+        margin-bottom: 0.8rem;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      select {
+        width: 100%;
+        padding: 0.2rem 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="/register" id="my-form" autocomplete="off">
+        <h1>Form</h1>
+        <div>
+          <label for="username">Username</label>
+          <input
+            class="input-block"
+            type="text"
+            name="username"
+            id="username"
+          />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input
+            class="input-block"
+            type="password"
+            name="password"
+            id="password"
+          />
+        </div>
+        <div>
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            class="input-block"
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+          />
+        </div>
+        <div>
+          <input type="checkbox" id="checkbox" name="checkbox" />
+          <label class="form-check-label" for="checkbox"
+            >I accept the terms of service</label
+          >
+        </div>
+
+        <div>
+          <label for="city">Country</label>
+          <select class="form-select" name="country" id="country" required>
+            <option selected>select your country</option>
+          </select>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+    <script src="./countries.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
